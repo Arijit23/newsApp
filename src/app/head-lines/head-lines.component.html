@@ -1,10 +1,10 @@
-<div class="container-fluid mt-3">
-    <h4>Headlines</h4>
+<div class="container-fluid mt-3" >
+    <h4 style="font-weight: bold; color: white;">Headlines</h4>
     <div class="row mt-3">
-        <div *ngFor="let al of HeadlinesData" class="col-lg-3 mt - 3 mb - 3">
+        <div *ngFor="let al of HeadlinesData" class="col-lg-3 mt-3 mb-3">
             <div class="box">
-            <img src="{{al.urlToImage}}" width="100%">
-            <h6 class="mt-3 mb-3" style="font-weight: bold;">{{al.title}}</h6>
+            <img src="{{al.urlToImage}}" alt="image">
+            <h6 class="mt-3 mb-3" style="font-weight: bold;">{{al.title | shorten:120}}</h6>
             <!-- <p>{{al.content}}</p> -->
             <a class="btn btn-dark btn-sm" target="_blank" href="{{al.url}}">Read More</a>
         </div>

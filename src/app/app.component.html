@@ -1,22 +1,83 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">NewsToday</a>
+<ngx-loading-bar [includeSpinner]="false" height="3px"></ngx-loading-bar>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
+  <section class="w-100 p-2" style="background-image: linear-gradient(to left,rgba(97, 77, 77, 0.751), rgba(94, 70, 70, 0.358));">
+  <div class="container-fluid fw-bold">
+    <a class="navbar-brand" routerLink="">NewsToday</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Home</a>
+          <a class="nav-link "  aria-current="page" routerLink="" title="HeadLines">Headlines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="tech" title="Tech News">Tech News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="business" title="Business News">Business News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="entertainment" title="Entertainment News">Entertainment News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="sports" title="sports News">Sports News</a>
         </li>
       </ul>
     </div>
   </div>
+</section>
 </nav>
 <router-outlet></router-outlet>
-<footer>
-  <div class="text-center text-success" style="font-weight: bold;">Created by <span style="background-color:lightgreen">
-    Arijit Laha</span></div>
-    <br>
-  <div class="text-center" style="font-weight: bold;">&copy; & &reg; by NewsToday</div>
+<div>
+<footer class="text-center" style="background-color: rgb(160, 16, 93);" >
+  <section class='d-flex justify-content-between p-4' style="background-image: linear-gradient(to left,rgba(0, 0, 0, 0), rgb(0, 0, 0));">
+  <div class="text-center mx-auto" style="font-weight: bold; color: white;">Created by Arijit Laha</div></section>
+  <section class='text-center mx-auto'>
+    <div class='container text-center text-md-start mt-5'>
+      <div class='row mt-3'>
+  <div class='w-auto p-3 h-auto d-inline-block mx-auto mb-4' style="color: white;">
+    <p>
+     <span><h6 class='text-uppercase fw-bold'>Find me on :</h6></span>
+      <p>
+      <a class="first" href="https://www.facebook.com/arijit.laha.777/" rel="nofollow" target="_blank"  title="facebook" role="button">
+       <span><i class="fa fa-brands fa-2x fa-cog fa-fw fa-facebook-square" style="color: white;" aria-hidden="true"></i></span>
+      </a>
+    </p>
+    <p>
+      <a href="https://www.instagram.com/arijit__laha/" rel="nofollow" target="_blank" title="instagram" role="button">
+      <span><i class="fa fa-brands fa-2x fa-cog fa-fw fa-instagram" style="color: white;" aria-hidden="true"></i></span>
+      </a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/arijit-laha-939a15239/ " rel="nofollow" target="_blank" title="linkedin" role="button">
+        <span><i class="fa fa-brands fa-2x fa-cog fa-fw fa-linkedin-square" style="color: white;" aria-hidden="true"></i></span>
+      </a>
+    </p>
+    <p>
+      <a href="https://github.com/Arijit23" rel="nofollow" target="_blank" title="github" role="button">
+        <span><i class="fa fa-brands fa-2x fa-cog fa-fw fa-github-square" style="color: white;" aria-hidden="true"></i></span>
+      </a>
+    </p>
+  </div>
+  <div class='w-auto p-3 h-auto d-inline-block mx-auto mb-4 fw-bold' style="color: white;">
+    <h6 class='text-uppercase fw-bold'>Contact :</h6>
+    <p>
+      <i class="fa fa-solid fa-house"></i> Howrah, West Bengal, India
+    </p>
+    <p>
+      <i class="fa fa-solid fa-at"></i> mearijitlaha@gmail.com
+    </p>
+    <p>
+      <i class="fa fa-solid fa-phone"></i> +91 9123992369
+    </p>
+  </div>
+  </div>
+  </div>
+  </section>
+  <section class='d-flex justify-content-between p-4'
+    style="background-image: linear-gradient(to left,rgba(6, 1, 1, 0), rgb(19, 18, 18));">
+  <div class="text-center mx-auto" style="font-weight: bold; color: white;">&copy; & &reg; by NewsToday</div>
+  </section>
 </footer>
+</div>
