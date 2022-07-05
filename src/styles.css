@@ -7,7 +7,7 @@ box-sizing:border-box;
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #615f6a;
+    background-color: #254e58;
 }
 .box{
     width: 100%;
@@ -15,10 +15,9 @@ body{
     display: grid;
     padding: 20px 20px;
     margin: 20;
-    background-color: rgb(206, 177, 177);
-    border: 2px solid rgb(223, 130, 130);
+    background-color: #88bdbc;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     flex-wrap: wrap; 
     align-self: auto;
     align-items: center;
